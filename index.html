@@ -326,7 +326,63 @@
 
         <table style="width:80%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 		
-		<!-- ICCV - HANDWRITING RECOGNITION -->
+		<!-- ICIP -->
+          <tr onmouseout="ICIP_stop()" onmouseover="ICIP_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='icml2022'><img src='images/ICIP2022.JPG'></div>
+				<img src='images/ICIP2022.JPG'>
+              </div>
+              <script type="text/javascript">
+                function ICIP_start() {
+                  document.getElementById('neurips2021').style.opacity = "1";
+                }
+
+                function ICIP_stop() {
+                  document.getElementById('neurips2021').style.opacity = "0";
+                }
+                ICIP_stop()
+              </script>
+            </td>
+            <td style="padding:10px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/pdf/2011.13307.pdf" target="_blank">
+                <papertitle><font size="3">Polygon-free: Unconstrained Scene Text Detection with Box Annotations</font></papertitle>
+              </a>
+              <br><br>
+               <strong><font size="3"> Weijia Wu</font></strong>, <font size="3">Enze Xie</font>, <font size="3"> Ruimao Zhang</font>, <font size="3"> Wenhai Wang</font>, <font size="3">  Ping Luo</font>
+                <font size="3"> Hong Zhou</font> <font size="3"></font>.
+              <br><font size="3">
+							<em>International Conference on Information Processing (<strong><font size="3.5">ICIP2022</font></strong>)</em>,
+              </font>
+              <br>
+              <p></p>
+              <a href="javascript:void(0);" onclick="myFunction('ICIP_abs')"><font size="3">Abstract</font></a> /
+             <a href="https://cmsworkshops.com/ICIP2022/Papers/Uploads/Proposals/PaperNum/1868/20220312010953_729952_1868.pdf" target="_blank" target="_blank"><font size="3">arXiv</font></a> /
+              <a href="javascript:void(0);" onclick="myFunction('ICIP2022_bib')"><font size="3">BibTex</font></a> /
+			  <a href="https://github.com/weijiawu/Polygon-free-Unconstrained-Scene-Text-Detection-with-Box-Annotations" target="_blank" target="_blank"><font size="3">Code</font></a> /
+              <p></p>
+              <div id="ICIP_abs" style="display:none; text-align:justify;min-width:350px;"><font size="3">
+                <em> Although a polygon is a more accurate representation than an upright bounding box for text detection, the annotations of polygons are extremely expensive and challenging.
+Unlike existing works that employ fully-supervised training with polygon annotations, this study proposes an unconstrained text detection system termed Polygon-free (PF), in which most existing polygon-based text detectors (e.g.,PSENet [33],DB [16]) are trained with only upright bounding box annotations. Our core idea is to transfer knowledge
+from synthetic data to real data to enhance the supervision information of upright bounding boxes. This is made possible with a simple segmentation network, namely Skeleton Attention Segmentation Network (SASN), that includes three vital components (i.e., channel attention, spatial attention
+and skeleton attention map) and one soft cross-entropy loss. Experiments demonstrate that the proposed Polygonfree system can combine general detectors (e.g., EAST, PSENet, DB) to yield surprisingly high-quality pixel-level results with only upright bounding box annotations on a
+variety of datasets (e.g., ICDAR2019-Art, TotalText, ICDAR2015). For example, without using polygon annotations, PSENet achieves an 80.5% F-score on TotalText [3](vs. 80.9% of fully supervised counterpart), 31.1% better than training directly with upright bounding box annotations, and saves 80%+ labeling costs. We hope that
+PF can provide a new perspective for text detection to reduce the labeling costs.
+              </font></div>
+              <div id="ICIP2022_bib" style="font-family:Courier;display:none;min-width:350px;"><font size="2">
+                <br>
+                @InProceedings{wu2022polygon,<br>
+                author = {Weijia Wu and Enze Xie and Ruimao Zhang and Wenhai Wang and Ping Luo and Hong Zhou},<br>
+                title = {Polygon-free: Unconstrained Scene Text Detection with Box Annotations},<br>
+                booktitle = {IInternational Conference on Information Processing},<br>
+                year = {2022}<br>
+                }
+              </font></div>
+              </td>
+          </tr>
+		  
+		  
+		<!-- ICML workshop -->
           <tr onmouseout="ICMLworkshop_stop()" onmouseover="ICMLworkshop_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
