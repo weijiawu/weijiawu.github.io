@@ -130,6 +130,7 @@
                   </heading>
                   <p>
                     <font size="3">
+							<li><sup></strong></font></sup><font size=3.5">[July 2022]:</font></b> <i><b>Two</b></i> papers got accepted in <b>ECCV</b> 2022!</li>
 							<li><sup></strong></font></sup><font size=3.5">[June 2022]:</font></b> <i><b>One</b></i> paper got accepted in <b>ICIP</b> 2022!</li>
 							<li><sup></strong></font></sup><font size=3.5">[March 2022]:</font></b><i><b></b></i>Serve as a reviewer for ICML2022.</li>
                         	<li><sup></strong></font></sup><font size=3.5">[July 2021]:</font></b> <i><b>One</b></i> paper got accepted in <b>NeurIPS</b> 2021!!</li>
@@ -304,6 +305,60 @@
 
         <table style="width:80%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 		
+		<!-- ECCV2022 TransDETR -->
+          <tr onmouseout="ECCV2022_stop()" onmouseover="ECCV2022_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='eccv2022'><img src='images/eccv2022.jpg'></div>
+				<img src='images/eccv2022.jpg'>
+              </div>
+              <script type="text/javascript">
+                function ECCV2022_start() {
+                  document.getElementById('neurips2021').style.opacity = "1";
+                }
+
+                function ECCV2022_stop() {
+                  document.getElementById('neurips2021').style.opacity = "0";
+                }
+                ECCV2022_stop()
+              </script>
+            </td>
+            <td style="padding:10px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2203.10539" target="_blank">
+                <papertitle><font size="3">End-to-End Video Text Spotting with Transformer</font></papertitle>
+              </a>
+              <br><br>
+               <strong><font size="3"> Weijia Wu</font></strong>, <font size="3">Yuanqiang Cai</font>, <font size="3"> Chunhua Shen</font>, <font size="3"> Debing Zhang</font>, <font size="3">  Ying Fu</font>, <font size="3">  Ping Luo</font>
+                <font size="3"> Hong Zhou</font> <font size="3"></font>.
+              <br><font size="3">
+							<em>European Conference on Computer Vision 2022 (<strong><font size="3.5">ECCV 2022</font></strong>)</em>,
+              </font>
+              <br>
+              <p></p>
+              <a href="javascript:void(0);" onclick="myFunction('ECCV_abs')"><font size="3">Abstract</font></a> /
+             <a href="https://arxiv.org/abs/2203.10539" target="_blank" target="_blank"><font size="3">arXiv</font></a> /
+              <a href="javascript:void(0);" onclick="myFunction('ECCV2022_bib')"><font size="3">BibTex</font></a> /
+			  <a href="https://github.com/weijiawu/TransDETR" target="_blank" target="_blank"><font size="3">Code</font></a> /
+              <p></p>
+              <div id="ECCV2022_abs" style="display:none; text-align:justify;min-width:350px;"><font size="3">
+                <em> Video text spotting(VTS) is the task that requires simultaneously detecting, tracking and recognizing text in video. Recent methods typically follow tracking-by-match paradigm and develop sophisticated pipelines to tackle this task. 
+				In this paper, rooted in Transformer sequence modeling, we propose a simple, but effective end-to-end video text DEtection, Tracking, and Recognition framework (TransDETR). TransDETR mainly includes two advantages: 1) Different from the explicit match paradigm in the adjacent frame, 
+				TransDETR tracks and recognizes each text implicitly by the different query termed `text query' over long-range temporal sequence (more than 7 frames). 2) TransDETR is the first end-to-end trainable video text spotting framework, which simultaneously addresses the three sub-tasks (text detection, tracking, recognition). 
+				Extensive experiments on four video text datasets (ICDAR2013 Video, ICDAR2015 Video, Minetto, and YouTube Video Text) are conducted to demonstrate that \detr achieves the state-of-the-art performance with up to around 7.0% improvements on detection, tracking, and spotting tasks.
+              </font></div>
+              <div id="ECCV2022_bib" style="font-family:Courier;display:none;min-width:350px;"><font size="2">
+                <br>
+                @InProceedings{wu2022end,<br>
+                author = {Wu, Weijia and Zhang, Debing and Fu, Ying and Shen, Chunhua and Zhou, Hong and Cai, Yuanqiang and Luo, Ping},<br>
+                title = {End-to-End Video Text Spotting with Transformer},<br>
+                booktitle = {European Conference on Computer Vision},<br>
+                year = {2022}<br>
+                }
+              </font></div>
+              </td>
+          </tr>
+		  
+		  
 		<!-- ICIP -->
           <tr onmouseout="ICIP_stop()" onmouseover="ICIP_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
