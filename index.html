@@ -312,6 +312,106 @@
 
         <table style="width:80%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         
+        
+        <!-- BiViT -->
+          <tr onmouseout="bivit_stop()" onmouseover="bivit_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='bivit'><img src='images/bivit.png'></div>
+                <img src='images/bivit.jpg'>
+              </div>
+              <script type="text/javascript">
+                function bivit_start() {
+                  document.getElementById('ICCV2023').style.opacity = "1";
+                }
+
+                function bivit_stop() {
+                  document.getElementById('ICCV2023').style.opacity = "0";
+                }
+                  bivit_stop()
+              </script>
+            </td>
+            <td style="padding:10px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2211.07091" target="_blank">
+                <papertitle><font size="3">BiViT: Extremely Compressed Binary Vision Transformers</font></papertitle>
+              </a>
+              <br><br>
+              <font size="3">Yefei He</font>,<font size="3">Zhenyu Lou</font>,,<font size="3">Luoming Zhang</font><strong><font size="3"> Weijia Wu</font></strong>,  <font size="3"> Bohan Zhuang</font>, <font size="3"> Hong Zhou</font>.
+              <br><font size="3">
+                    <em>International Conference on Computer Vision Conference (<strong><font size="3.5">ICCV2023</font></strong>)</em>,
+              </font>
+              <br>
+              <p></p>
+              <a href="javascript:void(0);" onclick="myFunction('bivit_abs')"><font size="3">Abstract</font></a> /
+             <a href="https://arxiv.org/abs/2211.07091" target="_blank" target="_blank"><font size="3">arXiv</font></a> /
+              <a href="javascript:void(0);" onclick="myFunction('bivit_bib')"><font size="3">BibTex</font></a> /
+              <p></p>
+              <div id="bivit_abs" style="display:none; text-align:justify;min-width:350px;"><font size="3">
+                <em> Model binarization can significantly compress model size, reduce energy consumption, and accelerate inference through efficient bit-wise operations. Although binarizing convolutional neural networks have been extensively studied, there is little work on exploring binarization on vision Transformers which underpin most recent breakthroughs in visual recognition. To this end, we propose to solve two fundamental challenges to push the horizon of Binary Vision Transformers (BiViT). First, the traditional binary method does not take the long-tailed distribution of softmax attention into consideration, bringing large binarization errors in the attention module. To solve this, we propose Softmax-aware Binarization, which dynamically adapts to the data distribution and reduces the error caused by binarization. Second, to better exploit the information of the pretrained model and restore accuracy, we propose a Cross-layer Binarization scheme and introduce learnable channel-wise scaling factors for weight binarization. The former decouples the binarization of self-attention and MLP to avoid mutual interference while the latter enhances the representation capacity of binarized models. Overall, our method performs favorably against state-of-the-arts by 19.8% on the TinyImageNet dataset. On ImageNet, BiViT achieves a competitive 70.8% Top-1 accuracy over Swin-T model, outperforming the existing SOTA methods by a clear margin.
+              </font></div>
+              <div id="bivit_bib" style="font-family:Courier;display:none;min-width:350px;"><font size="2">
+                <br>
+                @InProceedings{zhao2023GPM,<br>
+                author = {Yefei He, Zhenyu Lou, Luoming Zhang, Weijia Wu, Bohan Zhuang, Hong Zhou},<br>
+                title = {BiViT: Extremely Compressed Binary Vision Transformer},<br>
+                booktitle = {International Conference on Computer Vision Conference 2023},<br>
+                year = {2023}<br>
+                }
+              </font></div>
+              </td>
+          </tr>
+          
+          
+        <!-- GPM -->
+          <tr onmouseout="GPM_stop()" onmouseover="GPM_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='GPM'><img src='images/GPM.png'></div>
+                <img src='images/GPM.jpg'>
+              </div>
+              <script type="text/javascript">
+                function GPM_start() {
+                  document.getElementById('ICCV2023').style.opacity = "1";
+                }
+
+                function GPM_stop() {
+                  document.getElementById('ICCV2023').style.opacity = "0";
+                }
+                  GPM_stop()
+              </script>
+            </td>
+            <td style="padding:10px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2307.09756" target="_blank">
+                <papertitle><font size="3">Generative Prompt Model for Weakly Supervised Object Localization</font></papertitle>
+              </a>
+              <br><br>
+              <font size="3">Yuzhong Zhao</font>,<font size="3">Qixiang Ye</font>,<strong><font size="3"> Weijia Wu</font></strong>,  <font size="3"> Chunhua Shen</font>, <font size="3"> Fan Wan</font>.
+              <br><font size="3">
+                    <em>International Conference on Computer Vision Conference (<strong><font size="3.5">ICCV2023</font></strong>)</em>,
+              </font>
+              <br>
+              <p></p>
+              <a href="javascript:void(0);" onclick="myFunction('GPM_abs')"><font size="3">Abstract</font></a> /
+             <a href="https://arxiv.org/abs/2307.09756" target="_blank" target="_blank"><font size="3">arXiv</font></a> /
+              <a href="javascript:void(0);" onclick="myFunction('GPM_bib')"><font size="3">BibTex</font></a> /
+              <a href="https://github.com/callsys/GenPromp" target="_blank" target="_blank"><font size="3">GitHub</font></a> /
+              <p></p>
+              <div id="GPM_abs" style="display:none; text-align:justify;min-width:350px;"><font size="3">
+                <em> Weakly supervised object localization (WSOL) remains challenging when learning object localization models from image category labels. Conventional methods that discriminatively train activation models ignore representative yet less discriminative object parts. In this study, we propose a generative prompt model (GenPromp), defining the first generative pipeline to localize less discriminative object parts by formulating WSOL as a conditional image denoising procedure. During training, GenPromp converts image category labels to learnable prompt embeddings which are fed to a generative model to conditionally recover the input image with noise and learn representative embeddings. During inference, enPromp combines the representative embeddings with discriminative embeddings (queried from an off-the-shelf vision-language model) for both representative and discriminative capacity. The combined embeddings are finally used to generate multi-scale high-quality attention maps, which facilitate localizing full object extent. Experiments on CUB-200-2011 and ILSVRC show that GenPromp respectively outperforms the best discriminative models by 5.2% and 5.6% (Top-1 Loc), setting a solid baseline for WSOL with the generative model.
+              </font></div>
+              <div id="GPM_bib" style="font-family:Courier;display:none;min-width:350px;"><font size="2">
+                <br>
+                @InProceedings{zhao2023GPM,<br>
+                author = {Yuzhong Zhao, Qixiang Ye, Weijia Wu, Chunhua Shen, Fang Wan},<br>
+                title = {Generative Prompt Model for Weakly Supervised Object Localization},<br>
+                booktitle = {International Conference on Computer Vision Conference 2023},<br>
+                year = {2023}<br>
+                }
+              </font></div>
+              </td>
+          </tr>
+          
+          
         <!-- DiffuMask -->
           <tr onmouseout="DiffuMask_stop()" onmouseover="DiffuMask_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
