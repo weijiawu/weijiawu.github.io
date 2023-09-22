@@ -130,6 +130,7 @@
                   </heading>
                   <p>
                     <font size="3">
+                            <li><sup></strong></font></sup><font size=3.5">[Sep 2023]:</font></b> <i><b>Three</b></i> paper got accepted in <b>NeurIPS</b> 2023!</li>
                             <li><sup></strong></font></sup><font size=3.5">[July 2023]:</font></b> <i><b>Three</b></i> paper got accepted in <b>ICCV</b> 2023!</li>
                             <li><sup></strong></font></sup><font size=3.5">[Dec 2022]:We organize <a href="https://sites.google.com/view/loveucvpr23/home" target="_blank" target="_blank"><font size="3">LOng-form VidEo Understanding and Generation Workshop & International Challenge @ CVPR'23</font></a>!</li>
                             <li><sup></strong></font></sup><font size=3.5">[Dec 2022]:We organize <a href="https://rrc.cvc.uab.es/?ch=22&com=introduction" target="_blank" target="_blank"><font size="3">ICDAR2023 Video Text Reading Competition for Dense and Small Text</font></a>!</li>
@@ -312,7 +313,58 @@
 
         <table style="width:80%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         
-        
+        <!-- DatasetDM -->
+          <tr onmouseout="bivit_stop()" onmouseover="DatasetDM_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='DatasetDM'><img src='images/datasetdm.jpg'></div>
+                <img src='images/datasetdm.jpg'>
+              </div>
+              <script type="text/javascript">
+                function bivit_start() {
+                  document.getElementById('Neurips2023').style.opacity = "1";
+                }
+
+                function bivit_stop() {
+                  document.getElementById('Neurips2023').style.opacity = "0";
+                }
+                  bivit_stop()
+              </script>
+            </td>
+            <td style="padding:10px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2308.06160" target="_blank">
+                <papertitle><font size="3">DatasetDM: Synthesizing Data with Perception Annotations Using Diffusion Models</font></papertitle>
+              </a>
+              <br><br>
+              <strong><font size="3"> Weijia Wu</font></strong>, <font size="3">Yuzhong Zhao</font>, <font size="3"> Hao Chen</font>, <font size="3"> Yuchao Gu</font>,<font size="3"> Rui Zhao</font>,<font size="3"> Yefei He</font>, <font size="3"> Hong Zhou</font>, <font size="3"> Mike Zheng Shou</font>,  <font size="3">  Chunhua Shen</font>.
+              <br><font size="3">
+                    <em>Thirty-seventh Conference on Neural Information Processing Systems(<strong><font size="3.5">NeurIPS 2023</font></strong>)</em>,
+              </font>
+              <br>
+              <p></p>
+              <a href="javascript:void(0);" onclick="myFunction('datasetdm_abs')"><font size="3">Abstract</font></a> /
+             <a href="https://arxiv.org/abs/2308.06160" target="_blank" target="_blank"><font size="3">arXiv</font></a> /
+              <a href="javascript:void(0);" onclick="myFunction('datasetdm_bib')"><font size="3">BibTex</font></a> /
+             <a href="https://github.com/showlab/DatasetDM" target="_blank" target="_blank"><font size="3">GitHub</font></a> /
+             <a href="https://weijiawu.github.io/DatasetDM_page/" target="_blank" target="_blank"><font size="3">Project Page</font></a> /
+             <a href="https://mp.weixin.qq.com/s/VAMxr9Ot9jKnGHkBnla-fA" target="_blank" target="_blank"><font size="3">中文公众号报道</font></a> /
+              <p></p>
+              <div id="bivit_abs" style="display:none; text-align:justify;min-width:350px;"><font size="3">
+                <em> Current deep networks are very data-hungry and benefit from training on largescale datasets, which are often time-consuming to collect and annotate. By contrast, synthetic data can be generated infinitely using generative models such as DALL-E and diffusion models, with minimal effort and cost. In this paper, we present DatasetDM, a generic dataset generation model that can produce diverse synthetic images and the corresponding high-quality perception annotations (e.g., segmentation masks, and depth). Our method builds upon the pre-trained diffusion model and extends text-guided image synthesis to perception data generation. We show that the rich latent code of the diffusion model can be effectively decoded as accurate perception annotations using a decoder module. Training the decoder only needs less than 1% (around 100 images) manually labeled images, enabling the generation of an infinitely large annotated dataset. Then these synthetic data can be used for training various perception models for downstream tasks. To showcase the power of the proposed approach, we generate datasets with rich dense pixel-wise labels for a wide range of downstream tasks, including semantic segmentation, instance segmentation, and depth estimation. Notably, it achieves 1) state-of-the-art results on semantic segmentation and instance segmentation; 2) significantly more robust on domain generalization than using the real data alone; and state-of-the-art results in zero-shot segmentation setting; and 3) flexibility for efficient application and novel task composition (e.g., image editing).
+              </font></div>
+              <div id="bivit_bib" style="font-family:Courier;display:none;min-width:350px;"><font size="2">
+                <br>
+                @article{wu2023datasetdm,
+                  title={DatasetDM: Synthesizing Data with Perception Annotations Using Diffusion Models},
+                  author={Wu, Weijia and Zhao, Yuzhong and Chen, Hao and Gu, Yuchao and Zhao, Rui and He, Yefei and Zhou, Hong and Shou, Mike Zheng and Shen, Chunhua},
+                  journal={arXiv preprint arXiv:2308.06160},
+                  year={2023}
+                }
+              </font></div>
+              </td>
+          </tr>
+                
+                
         <!-- BiViT -->
           <tr onmouseout="bivit_stop()" onmouseover="bivit_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
