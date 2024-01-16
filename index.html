@@ -130,6 +130,7 @@
                   </heading>
                   <p>
                     <font size="3">
+                            <li><sup></strong></font></sup><font size=3.5">[Jan. 2024]:</font></b> <i><b>One</b></i> paper got accepted in <b>ICLR</b> 2024 (spotlight)!</li>
                             <li><sup></strong></font></sup><font size=3.5">[Nov. 2023]:</font></b> <i><b>One</b></i> paper (DSText V2) got accepted in <b>Pattern Recognition</b> 2023!</li>
                             <li><sup></strong></font></sup><font size=3.5">[Nov. 2023]:</font></b> <i><b>One</b></i> paper (<a href="https://arxiv.org/abs/2311.17450" target="_blank" target="_blank"><font size="3">CisDQ</font></a>) got accepted in <b>TCSVT</b> 2023!</li>
                             <li><sup></strong></font></sup><font size=3.5">[Sep 2023]:</font></b> <i><b>Three</b></i> paper got accepted in <b>NeurIPS</b> 2023!</li>
@@ -301,8 +302,81 @@
         </script>
         
         
+        <table style="width:85%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:0px;width:100%;vertical-align:middle;text-align:justify">
+               <p>
+              </p>
+              <heading><font size="5">2024</font></heading>
+            </td>
+          </tr>
+        </tbody></table>
         
-        
+        <!-- EfficientDM -->
+          <tr onmouseout="EfficientDM_stop()" onmouseover="EfficientDM_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='EfficientDM'><img src='images/1705411673940.jpg'></div>
+                <img src='images/1705411673940.jpg'>
+              </div>
+              <script type="text/javascript">
+                function bivit_start() {
+                  document.getElementById('EfficientDM_PTDQ').style.opacity = "1";
+                }
+
+                function bivit_stop() {
+                  document.getElementById('EfficientDM_PTDQ').style.opacity = "0";
+                }
+                  EfficientDM_stop()
+              </script>
+            </td>
+            <td style="padding:10px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/pdf/2305.10657.pdf" target="_blank">
+                <papertitle><font size="3">EfficientDM: Efficient Quantization-Aware Fine-Tuning of Low-Bit Diffusion Models</font></papertitle>
+              </a>
+              <br><br>
+              <font size="3">Yefei He</font>, <font size="3"> Jing Liu</font>, <strong><font size="3"> Weijia Wu</font></strong>,<font size="3"> Hong Zhou</font>,<font size="3"> Bohan Zhuang</font>.
+              <br><font size="3">
+                    <em>The Twelfth International Conference on Learning Representations(<strong><font size="3.5">ICLR 2024 (spotlight)</font></strong>)</em>,
+              </font>
+              <br>
+              <p></p>
+              <a href="javascript:void(0);" onclick="myFunction('EfficientDM_abs')"><font size="3">Abstract</font></a> /
+             <a href="https://arxiv.org/pdf/2310.03270.pdf" target="_blank" target="_blank"><font size="3">arXiv</font></a> /
+              <a href="javascript:void(0);" onclick="myFunction('EfficientDM_bib')"><font size="3">BibTex</font></a> /
+              <p></p>
+              <div id="EfficientDM_abs" style="display:none; text-align:justify;min-width:350px;"><font size="3">
+                <em> Diffusion models have demonstrated remarkable capabilities in image synthesis and related generative tasks. Nevertheless, their practicality for low-latency
+                    real-world applications is constrained by substantial computational costs and latency issues. Quantization is a dominant way to compress and accelerate diffusion
+                    models, where post-training quantization (PTQ) and quantization-aware training
+                    (QAT) are two main approaches, each bearing its own properties. While PTQ exhibits efficiency in terms of both time and data usage, it may lead to diminished
+                    performance in low bit-width settings. On the other hand, QAT can help alleviate performance degradation but comes with substantial demands on computational and data resources. To capitalize on the advantages while avoiding their respective drawbacks, we introduce a data-free, quantization-aware and parameterefficient fine-tuning framework for low-bit diffusion models, dubbed EfficientDM,
+                    to achieve QAT-level performance with PTQ-like efficiency. Specifically, we propose a quantization-aware variant of the low-rank adapter (QALoRA) that can
+                    be merged with model weights and jointly quantized to low bit-width. The finetuning process distills the denoising capabilities of the full-precision model into
+                    its quantized counterpart, eliminating the requirement for training data. To further
+                    enhance performance, we introduce scale-aware optimization to address ineffective learning of QALoRA due to variations in weight quantization scales across
+                    different layers. We also employ temporal learned step-size quantization to handle
+                    notable variations in activation distributions across denoising steps. Extensive experimental results demonstrate that our method significantly outperforms previous
+                    PTQ-based diffusion models while maintaining similar time and data efficiency.
+                    Specifically, there is only a marginal 0.05 sFID increase when quantizing both
+                    weights and activations of LDM-4 to 4-bit on ImageNet 256 × 256. Compared
+                    to QAT-based methods, our EfficientDM also boasts a 16.2× faster quantization
+                    speed with comparable generation quality, rendering it a compelling choice for
+                    practical applications.
+              </font></div>
+              <div id="EfficientDM_bib" style="font-family:Courier;display:none;min-width:350px;"><font size="2">
+                <br>
+                @article{he2023efficientdm,
+                  title={EfficientDM: Efficient Quantization-Aware Fine-Tuning of Low-Bit Diffusion Models},
+                  author={He, Yefei and Liu, Jing and Wu, Weijia and Zhou, Hong and Zhuang, Bohan},
+                  journal={The Twelfth International Conference on Learning Representations (ICLR 2024)},
+                  year={2024}<br>
+                }
+              </font></div>
+              </td>
+          </tr>
+          
+          
         <table style="width:85%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:0px;width:100%;vertical-align:middle;text-align:justify">
