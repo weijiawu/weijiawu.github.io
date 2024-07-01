@@ -134,7 +134,7 @@
                             <li><sup></strong></font></sup><font size=3.5"><b>Video Text Detection/Spotting</b>: <a href="https://arxiv.org/abs/2203.10539" target="_blank" target="_blank"><font size="3">TransDETR</font></a> (IJCV 2023), <a href="https://link.springer.com/chapter/10.1007/978-3-031-41679-8_23" target="_blank" target="_blank"><font size="3">DSText</font></a> (ICDAR 2023 & PR 2024)</li>
                             <li><sup></strong></font></sup><font size=3.5"><b>Synthetic Data for Perception Tasks</b>: <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Wu_DiffuMask_Synthesizing_Images_with_Pixel-level_Annotations_for_Semantic_Segmentation_Using_ICCV_2023_paper.html" target="_blank" target="_blank"><font size="3">DiffuMask</font></a> (ICCV 2023), <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/ab6e7ad2354f350b451b5a8e14d04f51-Abstract-Conference.html" target="_blank" target="_blank"><font size="3">DatasetDM</font></a> (NeurIPS 2023)</li>
                             <li><sup></strong></font></sup><font size=3.5"><b>Image Generation</b>: <a href="https://arxiv.org/abs/2311.14284" target="_blank" target="_blank"><font size="3">ParaDiffusion</font></a> (Arxiv, Nov., 2023)
-                            <li><sup></strong></font></sup><font size=3.5"><b>Controllable Video Generation</b>: <a href="https://arxiv.org/abs/2403.07420" target="_blank" target="_blank"><font size="3">DragAnything</font></a> (Arxiv, Mar., 2024)
+                            <li><sup></strong></font></sup><font size=3.5"><b>Controllable Video Generation</b>: <a href="https://arxiv.org/abs/2403.07420" target="_blank" target="_blank"><font size="3">DragAnything</font></a> (ECCV 2024)
                       </p>
 
                       </font>
@@ -152,6 +152,7 @@
                   </heading>
                   <p>
                     <font size="3">
+                            <li><sup></strong></font></sup><font size=3.5">[Jul. 2024]:</font></b> <i><b>Three</b></i> papers (<a href="https://arxiv.org/abs/2403.07420" target="_blank" target="_blank"><font size="3">DragAnything</font></a>, <a href="https://arxiv.org/abs/2310.08465" target="_blank" target="_blank"><font size="3">MotionDirector</font></a>, <a href="https://arxiv.org/abs/2401.17910" target="_blank" target="_blank"><font size="3">ControlCap</font></a>) got accepted in <b>ECCV</b> 2024!</li>
                             <li><sup></strong></font></sup><font size=3.5">[Mar. 2024]:</font></b> <i><b>One</b></i> paper(<a href="https://arxiv.org/abs/2203.10539" target="_blank" target="_blank"><font size="3">TransDETR</font></a>) got accepted in <b>IJCV</b>!</li>
                             <li><sup></strong></font></sup><font size=3.5">[Feb. 2024]:</font></b> <i><b>One</b></i> paper got accepted in <b>CVPR</b> 2024!</li>
                             <li><sup></strong></font></sup><font size=3.5">[Jan. 2024]:</font></b> Got my Ph.D. degree from Zhejiang University!</li>
@@ -339,6 +340,64 @@
         
         <table style="width:80%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         
+        <!-- DragAnything -->
+          <tr onmouseout="DragAnything_stop()" onmouseover="DragAnything_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='DragAnything'><img src='images/Draganything.jpg'></div>
+                <img src='images/Draganything.jpg'>
+              </div>
+              <script type="text/javascript">
+                function bivit_start() {
+                  document.getElementById('DragAnything_PTDQ').style.opacity = "1";
+                }
+
+                function bivit_stop() {
+                  document.getElementById('DragAnything_PTDQ').style.opacity = "0";
+                }
+                  EfficientDM_stop()
+              </script>
+            </td>
+            <td style="padding:10px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/pdf/2403.07420" target="_blank">
+                <papertitle><font size="3">DragAnything: Motion Control for Anything using Entity Representation</font></papertitle>
+              </a>
+              <br><br>
+              <strong><font size="3"> Weijia Wu</font></strong>, <font size="3"> Zhuang Li</font>, <font size="3"> Yuchao Gu</font>,<font size="3"> Rui Zhao</font>,<font size="3"> Yefei He</font>,<font size="3"> David Junhao Zhang</font>,<font size="3"> Mike Zheng Shou</font>,<font size="3"> Yan Li</font>,<font size="3"> Tingting Gao</font>,<font size="3"> Di Zhang</font>.
+              <br><font size="3">
+                    <em>The 18th European Conference on Computer Vision(<strong><font size="3.5">ECCV 2024</font></strong>)</em>,
+              </font>
+              <br>
+              <p></p>
+              <a href="javascript:void(0);" onclick="myFunction('DragAnything_abs')"><font size="3">Abstract</font></a> /
+             <a href="https://arxiv.org/pdf/2403.07420" target="_blank" target="_blank"><font size="3">arXiv</font></a> /
+              <a href="javascript:void(0);" onclick="myFunction('DragAnything_bib')"><font size="3">BibTex</font></a> /
+              <p></p>
+              <div id="EfficientDM_abs" style="display:none; text-align:justify;min-width:350px;"><font size="3">
+                <em> We introduce DragAnything, which utilizes a entity representation to achieve motion control for any object in controllable video
+                    generation. Comparison to existing motion control methods, DragAnything offers several advantages. Firstly, trajectory-based is more userfriendly for interaction, when acquiring other guidance signals (e.g.,
+                    masks, depth maps) is labor-intensive. Users only need to draw a line (trajectory) during interaction. Secondly, our entity representation serves as
+                    an open-domain embedding capable of representing any object, enabling
+                    the control of motion for diverse entities, including background. Lastly,
+                    our entity representation allows simultaneous and distinct motion control for multiple objects. Extensive experiments demonstrate that our
+                    DragAnything achieves state-of-the-art performance for FVD, FID, and
+                    User Study, particularly in terms of object motion control, where our
+                    method surpasses the previous methods (e.g., DragNUWA) by 26% in
+                    human voting.
+              </font></div>
+              <div id="DragAnything_bib" style="font-family:Courier;display:none;min-width:350px;"><font size="2">
+                <br>
+                @article{wu2024draganything,
+                  title={DragAnything: Motion Control for Anything using Entity Representation},
+                  author={Wu, Wejia and Li, Zhuang and Gu, Yuchao and Zhao, Rui and He, Yefei and Zhang, David Junhao and Shou, Mike Zheng and Li, Yan and Gao, Tingting and Zhang, Di},
+                  journal={The 18th European Conference on Computer Vision (ECCV 2024)},
+                  year={2024}<br>
+                }
+              </font></div>
+              </td>
+          </tr>
+          
+          
         <!-- EfficientDM -->
           <tr onmouseout="EfficientDM_stop()" onmouseover="EfficientDM_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
