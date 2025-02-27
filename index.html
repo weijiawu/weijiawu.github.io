@@ -3,6 +3,15 @@
   
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177858501-1"></script>
+
+<style>
+  /* Set fixed width and height for images */
+  .one img {
+    width: 170px; /* Set width to 170px */
+    height: 136px; /* Set height to 136px */
+  }
+</style>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -326,9 +335,12 @@
         <tr onmouseout="moviebench_stop()" onmouseover="moviebench_start()">
           <td style="padding:20px;width:25%;vertical-align:middle">
             <div class="one">
-              <div class="two" id='MovieBench'><img src='images/moviebench.jpg'></div>
+              <div class="two" id='MovieBench'>
+                <img src='images/moviebench.jpg'>
+              </div>
               <img src='images/moviebench.jpg'>
             </div>
+
             <script type="text/javascript">
               function moviebench_start() {
                 document.getElementById('moviebench_PTDQ').style.opacity = "1";
