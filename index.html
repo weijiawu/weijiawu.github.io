@@ -121,7 +121,7 @@
                             <li><sup></strong></font></sup><font size=3.5"><b>Video Text Detection/Spotting</b>: <a href="https://arxiv.org/abs/2203.10539" target="_blank" target="_blank"><font size="3">TransDETR</font></a> (IJCV 2024), <a href="https://link.springer.com/chapter/10.1007/978-3-031-41679-8_23" target="_blank" target="_blank"><font size="3">DSText</font></a> (ICDAR 2023 & PR 2024), <a href="https://arxiv.org/abs/2112.04888" target="_blank" target="_blank"><font size="3">BOVText</font></a> (NeurIPS 2021, Dataset Track)</li>
                             <li><sup></strong></font></sup><font size=3.5"><b>Video Retrieval</b>: <a href="https://www.sciencedirect.com/science/article/abs/pii/S0031320324005697" target="_blank" target="_blank"><font size="3">TextVR</font></a> (PR 2023)
                             <li><sup></strong></font></sup><font size=3.5"><b>Synthetic Data for Perception Tasks</b>: <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Wu_DiffuMask_Synthesizing_Images_with_Pixel-level_Annotations_for_Semantic_Segmentation_Using_ICCV_2023_paper.html" target="_blank" target="_blank"><font size="3">DiffuMask</font></a> (ICCV 2023), <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/ab6e7ad2354f350b451b5a8e14d04f51-Abstract-Conference.html" target="_blank" target="_blank"><font size="3">DatasetDM</font></a> (NeurIPS 2023)</li>
-                            <li><sup></strong></font></sup><font size=3.5"><b>Image Generation</b>: <a href="https://arxiv.org/abs/2311.14284" target="_blank" target="_blank"><font size="3">ParaDiffusion</font></a> (Arxiv, Nov., 2023)
+                            <li><sup></strong></font></sup><font size=3.5"><b>Image Generation</b>: <a href="https://arxiv.org/abs/2311.14284" target="_blank" target="_blank"><font size="3">ParaDiffusion</font></a> (IJCV 2025)
                             <li><sup></strong></font></sup><font size=3.5"><b>Video Generation</b>: <a href="https://arxiv.org/abs/2403.07420" target="_blank" target="_blank"><font size="3">DragAnything</font></a> (ECCV 2024), <a href="https://github.com/showlab/Awesome-Video-Diffusion" target="_blank" target="_blank"><font size="3">Awesome-Video-Diffusion</font></a> (4.1k stars), <a href="https://weijiawu.github.io/MovieBench/" target="_blank" target="_blank"><font size="3">MovieBench</font></a> (CVPR 2025), <a href="https://weijiawu.github.io/MovieAgent/" target="_blank" target="_blank"><font size="3">MovieAgent</font></a> (Arxiv, Mar., 2025)
                             <li><sup></strong></font></sup><font size=3.5"><b>Unified Multimodal Models</b>: <a href="https://github.com/showlab/Awesome-Unified-Multimodal-Models" target="_blank" target="_blank"><font size="3">Awesome Unified Multimodal Models</font></a> (220 stars), <a href="https://d2jud02ci9yv69.cloudfront.net/2025-04-28-unified-models-47/blog/unified-models/" target="_blank" target="_blank"><font size="3">Blog--Towards Unified Multimodal Models:Trends and Insights</font></a> 
                       </p>
@@ -141,6 +141,7 @@
                   </heading>
                   <p>
                     <font size="3">
+                            <li><sup></strong></font></sup><font size=3.5">[Mar. 2025]:</font></b> <i><b>One</b></i> paper(<a href="https://arxiv.org/abs/2311.14284" target="_blank" target="_blank"><font size="3">ParaDiffusion</font></a>) got accepted in <b>IJCV</b> 2025!</li>
                             <li><sup></strong></font></sup><font size=3.5">[Feb. 2025]:</font></b> <i><b>Two</b></i> paper (<a href="https://weijiawu.github.io/MovieBench/" target="_blank" target="_blank"><font size="3">MovieBench</font></a>, <a href="https://chengyou-jia.github.io/ChatGen-Home/" target="_blank" target="_blank"><font size="3">ChatGen</font></a>) got accepted in <b>CVPR</b> 2025 !</li>
                             <li><sup></strong></font></sup><font size=3.5">[Jan. 2025]:</font></b> <i><b>One</b></i> paper (<a href="https://arxiv.org/pdf/2404.19652" target="_blank" target="_blank"><font size="3">VimTS</font></a>) got accepted in <b>TPAMI</b> 2025 !</li>
                             <li><sup></strong></font></sup><font size=3.5">[Sep. 2024]:</font></b> <i><b>One</b></i> paper (<a href="https://openreview.net/pdf?id=5t4ZAkPiJs" target="_blank" target="_blank"><font size="3">ZipCache</font></a>) got accepted in <b>NeurIPS</b> 2024!</li>
@@ -333,6 +334,62 @@
         </tbody></table>
       
       <table style="width:80%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        
+        <!-- IJCV -->
+        <tr onmouseout="IJCV_stop()" onmouseover="IJCV_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+
+            <div class="one">
+              <div class="two" id='IJCV'>
+                <img src='images/IJCV.jpg'>
+              </div>
+              <img src='images/IJCV.jpg'>
+            </div>
+
+            <script type="text/javascript">
+              function IJCV_start() {
+                document.getElementById('IJCV_PTDQ').style.opacity = "1";
+              }
+
+              function IJCV_stop() {
+                document.getElementById('IJCV_PTDQ').style.opacity = "0";
+              }
+              IJCV_stop()
+            </script>
+          </td>
+          <td style="padding:10px;width:75%;vertical-align:middle">
+            <a href="https://arxiv.org/abs/2311.14284" target="_blank">
+              <papertitle><font size="3">Paragraph-to-Image Generation with Information-Enriched Diffusion Model</font></papertitle>
+            </a>
+            <br><br>
+            <strong><font size="3"> Weijia Wu</font></strong>, <font size="3"> Zhuang Li</font>, <font size="3"> Yefei He</font>,<font size="3"> Mike Zheng Shou</font>,<font size="3"> Chunhua Shen</font>,<font size="3"> Lele Cheng</font>,<font size="3">Yan Li</font>,<font size="3">  Tingting Gao</font>,<font size="3">Zhang Di</font>.
+            <br><font size="3">
+                  <em>International Journal of Computer Vision (<strong><font size="3.5">IJCV</font></strong>)</em>,
+            </font>
+            <br>
+            <p></p>
+            <a href="javascript:void(0);" onclick="myFunction('IJCV_abs')"><font size="3">Abstract</font></a> /
+           <a href="https://arxiv.org/abs/2311.14284" target="_blank" target="_blank"><font size="3">arXiv</font></a> /
+            <a href="javascript:void(0);" onclick="myFunction('IJCV_bib')"><font size="3">BibTex</font></a> /
+            <a href="https://github.com/weijiawu/ParaDiffusion" target="_blank" target="_blank"><font size="3">GitHub</font></a> /
+            <a href="https://weijiawu.github.io/ParaDiffusionPage/" target="_blank" target="_blank"><font size="3">Project Page</font></a> /
+            <a href="https://x.com/weijiawu7/status/1730068187952361644" target="_blank" target="_blank"><font size="3">Twitter(X)</font></a> /
+            <p></p>
+            <div id="IJCV_abs" style="display:none; text-align:justify;min-width:350px;"><font size="3">
+              <em> 
+                Text-to-image (T2I) models have recently experienced rapid development, achieving astonishing performance in terms of fidelity and textual alignment capabilities. However, given a long paragraph (up to 512 words), these generation models still struggle to achieve strong alignment and are unable to generate images depicting complex scenes. In this paper, we introduce an information-enriched diffusion model for paragraph-to-image generation task, termed ParaDiffusion, which delves into the transference of the extensive semantic comprehension capabilities of large language models to the task of image generation. At its core is using a large language model (e.g., Llama V2) to encode long-form text, followed by fine-tuning with LORA to alignthe text-image feature spaces in the generation task. To facilitate the training of long-text semantic alignment, we also curated a high-quality paragraph-image pair dataset, namely ParaImage. This dataset contains a small amount of high-quality, meticulously annotated data, and a large-scale synthetic dataset with long text descriptions being generated using a vision-language model. Experiments demonstrate that ParaDiffusion outperforms state-of-the-art models (SD XL, DeepFloyd IF) on ViLG-300 and ParaPrompts, achieving up to 15% and 45% human voting rate improvements for visual appeal and text faithfulness, respectively. The code and dataset will be released to foster community research on long-text alignment.
+            </font></div>
+            <div id="moviebench_bib" style="font-family:Courier;display:none;min-width:350px;"><font size="2">
+              <br>
+              @article{wu2025paragraph,
+                title={Paragraph-to-image generation with information-enriched diffusion model},
+                author={Wu, Weijia and Li, Zhuang and He, Yefei and Shou, Mike Zheng and Shen, Chunhua and Cheng, Lele and Li, Yan and Gao, Tingting and Zhang, Di and Wang, Zhongyuan},
+                journal={International Journal of Computer Vision},
+                year={2025}<br>
+              }
+            </font></div>
+            </td>
+        </tr>
 
         <!-- MovieBench -->
         <tr onmouseout="moviebench_stop()" onmouseover="moviebench_start()">
