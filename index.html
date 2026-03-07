@@ -312,7 +312,7 @@
             <td style="padding:0px;width:100%;vertical-align:middle;text-align:justify">
                <p>
               </p>
-              <heading><font size="5">Selected Publications</font></heading>
+              <heading><font size="5">Selected Publications (* Equal, # Corresponding)</font></heading>
             </td>
           </tr>
         </tbody></table>
@@ -342,6 +342,61 @@
       <table style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         
 
+        <!-- WEAVE-->
+        <tr onmouseout="WEAVE_stop()" onmouseover="WEAVE_start()">
+          <td style="padding:5px;width:25%;vertical-align: top">
+
+            <div class="one">
+              <div class="two" id='weave'>
+                <img src='images/weave.png'>
+              </div>
+              <img src='images/weave.png'>
+            </div>
+
+            <script type="text/javascript">
+              function WEAVE_start() {
+                document.getElementById('WEAVE').style.opacity = "1";
+              }
+
+              function WEAVE_stop() {
+                document.getElementById('WEAVE').style.opacity = "0";
+              }
+              WEAVE_stop()
+            </script>
+          </td>
+          <td style="padding:5px;width:100%;vertical-align:top">
+            <a href="https://arxiv.org/abs/2511.11434" target="_blank">
+              <papertitle><font size="3">WEAVE: Unleashing and Benchmarking the In-context Interleaved Comprehension and Generation</font></papertitle>
+            </a>
+            <br><br>
+            <font size="3"> Wei Chow</font>, <font size="3"> Jiachun Pan</font>, <font size="3"> Yongyuan Liang</font>, <font size="3"> Mingze Zhou</font>, <font size="3"> Xue Song</font>, <font size="3"> Liyu Jia</font>, <font size="3"> Saining Zhang</font>, <font size="3"> Siliang Tang</font>, <font size="3"> Juncheng Li, <font size="3"> Fengda Zhang#</font>, <strong><font size="3"> Weijia Wu#</font></strong>, <font size="3"> Hanwang Zhang</font>, <font size="3"> Tat-Seng Chua </font>.
+            <br><font size="3">
+                  <em>IEEE Conference on Computer Vision and Pattern Recognition (<strong><font size="3.5">CVPR 2025</font></strong>)</em>,
+            </font>
+            <br>
+            <p></p>
+            <a href="javascript:void(0);" onclick="myFunction('WEAVE_abs')"><font size="3">Abstract</font></a> /
+           <a href="https://arxiv.org/abs/2511.11434" target="_blank" target="_blank"><font size="3">arXiv</font></a> /
+            <a href="javascript:void(0);" onclick="myFunction('WEAVE_bib')"><font size="3">BibTex</font></a> /
+            <a href="https://github.com/weichow23/weave" target="_blank" target="_blank"><font size="3">GitHub</font></a> /
+            <a href="https://weichow23.github.io/weave/" target="_blank" target="_blank"><font size="3">Project Page</font></a> /
+            <a href="https://x.com/_akhaliq/status/1990440661980762217" target="_blank" target="_blank"><font size="3">Twitter(X)</font></a> /
+            <p></p>
+            <div id="WEAVE_abs" style="display:none; text-align:justify;min-width:350px;"><font size="3">
+              <em> 
+                Recent advances in unified multimodal models (UMMs) have enabled impressive progress in visual comprehension and generation. However, existing datasets and benchmarks focus primarily on single-turn interactions, failing to capture the multi-turn, context-dependent nature of real-world image creation and editing. To address this gap, we present WEAVE, the first suite for in-context interleaved cross-modality comprehension and generation. Our suite consists of two complementary parts. WEAVE-100k is a large-scale dataset of 100K interleaved samples spanning over 370K dialogue turns and 500K images, covering comprehension, editing, and generation tasks that require reasoning over historical context. WEAVEBench is a human-annotated benchmark with 100 tasks based on 480 images, featuring a hybrid VLM judger evaluation framework based on both the reference image and the combination of the original image with editing instructions that assesses models' abilities in multi-turn generation, visual memory, and world-knowledge reasoning across diverse domains. Experiments demonstrate that training on WEAVE-100k enables vision comprehension, image editing, and comprehension-generation collaboration capabilities. Furthermore, it facilitates UMMs to develop emergent visual-memory capabilities, while extensive evaluations on WEAVEBench expose the persistent limitations and challenges of current approaches in multi-turn, context-aware image generation and editing. We believe WEAVE provides a view and foundation for studying in-context interleaved comprehension and generation for multi-modal community.
+            </font></div>
+            <div id="WEAVE_bib" style="font-family:Courier;display:none;min-width:350px;"><font size="2">
+              <br>
+              @article{chow2025weave,
+                title={WEAVE: Unleashing and Benchmarking the In-context Interleaved Comprehension and Generation},
+                author={Chow, Wei and Pan, Jiachun and Liang, Yongyuan and Zhou, Mingze and Song, Xue and Jia, Liyu and Zhang, Saining and Tang, Siliang and Li, Juncheng and Zhang, Fengda and others},
+                journal={IEEE Conference on Computer Vision and Pattern Recognition},
+                year={2025}<br>
+              }
+            </font></div>
+            </td>
+        </tr>
 
         <!-- IJCV -->
         <tr onmouseout="IJCV_stop()" onmouseover="IJCV_start()">
