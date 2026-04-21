@@ -129,3 +129,137 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/* =========================================================================
+   Refinements — 美观 / 使用 / 朴素
+   Appended last so it wins the cascade over style.css and the inline block.
+   No structural / layout changes; only typography, color, spacing, hover.
+   ========================================================================= */
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #fafafa;
+  color: #2b2b2b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, td, th, tr, p, a {
+  line-height: 1.65;
+}
+
+li {
+  line-height: 1.8;
+  margin-bottom: 4px;
+}
+
+p { margin-block-start: 0.6em; margin-block-end: 0.6em; }
+
+/* Section headings — subtle underline instead of bare text */
+heading {
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+  color: #1a1a1a;
+  letter-spacing: 0.2px;
+}
+
+name {
+  letter-spacing: 0.4px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+papertitle, strong { color: #1a1a1a; }
+
+/* Smooth link transitions + keyboard-visible focus ring */
+a { transition: color 0.15s ease-in-out; }
+a:focus-visible {
+  outline: 2px solid #1772d0;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Profile photo — soft rounded card feel */
+img[alt="profile photo"] {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+img[alt="profile photo"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Publication thumbnails — rounded + gentle shadow, lift on hover */
+.one img,
+.two img {
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease-in-out;
+}
+table tr:hover .one img {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+/* "Notes:" badge — replace loud red glow with a calm warning-style chip */
+.button {
+  background-color: #fff7e0 !important;
+  border: 1px solid #e8b923 !important;
+  border-radius: 4px !important;
+  color: #a77900 !important;
+  cursor: default;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 12px !important;
+  padding: 2px 8px !important;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  animation: none !important;
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+.button strong { color: #a77900 !important; }
+
+/* Footer logo — desaturate so it doesn't compete with content */
+img[src="./images/logo.png"] {
+  opacity: 0.75;
+  transition: opacity 0.2s ease-in-out;
+}
+img[src="./images/logo.png"]:hover { opacity: 1; }
+
+/* Responsive — single-column stack on small screens (desktop layout unchanged) */
+@media (max-width: 768px) {
+  name { font-size: 26px; }
+  heading { font-size: 19px; }
+  body { font-size: 14px; }
+
+  td[style*="width:63%"],
+  td[style*="width:40%"],
+  td[style*="width:25%"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+  }
+
+  .one, .two,
+  .one img, .two img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 280px;
+  }
+
+  img[alt="profile photo"] {
+    width: 60% !important;
+    max-width: 60% !important;
+    display: block;
+    margin: 0 auto;
+  }
+}
