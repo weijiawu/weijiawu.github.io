@@ -1,0 +1,26 @@
+Hiking short — original stylized Blender snow edition / 2026
+
+All characters, clothing, backpack, snowfields, mountain ridges, snow-covered
+firs, rocks, signposts and animation are procedurally created by
+scripts/render_hiking_stylized.py for this website.
+No stock footage, photographic background, AI image or downloaded character is used.
+Rendered with Blender 4.3 / Cycles, 864 x 576, 24 fps, 12 seconds.
+
+Motion uses a two-segment inverse-kinematic leg solver, planted stance, lifted
+swing phase, opposite arm swing, body sway and backpack follow-through.
+The scenery and planted boots share one world-space speed. A perspective
+tracking camera creates depth-dependent parallax: near snowbanks move faster
+on screen than trees and distant mountain ridges. Both mountain layers move.
+Repeating neighboring scenery tiles prevent popping at the camera edges.
+Alternating boot impressions are revealed behind the hiker on the snow trail.
+
+Ten walk cycles and repeating terrain tiles make the animation loop without
+reversing the hiker. Run the renderer with --validate to check perspective
+parallax and the 12-second scenery loop before rendering.
+
+The editor displays four excerpts from the actual Blender script: snowfield,
+leg IK, perspective/parallax, and Cycles frame rendering. Generate the excerpts
+and source line numbers with scripts/build_hiking_code.py. Typing, chapter
+captions and frame readout follow the pre-rendered video's playback time;
+Blender is not executed in the browser. The full script is downloadable.
+This is a stylized fictional character, not a likeness of Weijia Wu.

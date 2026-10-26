@@ -18,6 +18,29 @@
   .compact-list li { line-height: 1.32; margin: 0 0 2px 0; padding: 0; }
   .compact-list li + li { margin-top: 1px; }
   .hiring-highlight { font-weight: 700; color: #c0392b; }
+
+  /* Experience timeline: scoped to preserve the rest of the original template. */
+  .experience-timeline { list-style:none; margin:16px 0 0; padding:0; text-align:left; }
+  .experience-timeline > li { position:relative; display:grid; grid-template-columns:180px minmax(0,1fr); gap:36px; margin:0; padding:0 0 12px; }
+  .experience-timeline > li::before { content:""; position:absolute; left:197px; top:6px; width:11px; height:11px; box-sizing:border-box; border:2px solid #9bb7cd; border-radius:50%; background:#fff; z-index:1; }
+  .experience-timeline > li::after { content:""; position:absolute; left:202px; top:17px; bottom:-6px; width:1px; background:#d7e2eb; }
+  .experience-timeline > li:last-child { padding-bottom:0; }
+  .experience-timeline > li:last-child::after { display:none; }
+  .experience-timeline > li.is-current::before { border-color:#1772ad; background:#1772ad; box-shadow:0 0 0 4px #e7f1f8; }
+  .experience-date { padding-top:1px; color:#637483; font-size:13px; line-height:1.5; text-align:right; }
+  .experience-summary { margin:0; font-size:15px; line-height:1.4; }
+  .experience-role { color:#262d33; font-size:15px; font-weight:700; }
+  .experience-org { color:#394750; font-size:15px; }
+  .experience-note { margin:1px 0 0; color:#68737b; font-size:13px; line-height:1.4; }
+  .experience-current { display:inline-block; margin-left:8px; padding:1px 6px; border-radius:4px; color:#176b9c; background:#eaf3f9; font-size:10px; font-weight:600; vertical-align:2px; letter-spacing:.04em; }
+  @media (max-width:600px) {
+    .experience-timeline { margin-top:14px; max-width:calc(100vw - 56px); }
+    .experience-timeline > li { grid-template-columns:minmax(0,1fr); gap:2px; padding:0 0 12px 26px; }
+    .experience-timeline > li::before { left:0; top:5px; }
+    .experience-timeline > li::after { left:5px; top:16px; bottom:-5px; }
+    .experience-date { padding-top:0; text-align:left; font-size:12px; }
+    .experience-summary, .experience-role, .experience-org { font-size:14px; }
+  }
 </style>
 
 <script>
@@ -52,7 +75,11 @@
               </p>
 
               <p style="text-align:justify"><font size="3">
-                  Weijia Wu is a Researcher at Huawei Singapore Research Center, working with <a href="https://personal.ntu.edu.sg/hanwangzhang/" target="_blank"><font size="3">Prof. Hanwang Zhang</font></a>. Prior to this, he was a Research Fellow at (<a href="https://sites.google.com/view/showlab" target="_blank"><font size="3">Show Lab</font></a>), National University of Singapore, working with Prof. Mike Z. Shou. He received the PhD from Zhejiang University. Additionally, he is also a popper; and has been dancing popping for five years. In the spare time, he also enjoys playing basketball and swimming.
+                  Weijia Wu is a Senior Researcher at Huawei Singapore Research Center, working with <a href="https://personal.ntu.edu.sg/hanwangzhang/" target="_blank"><font size="3">Prof. Hanwang Zhang</font></a>. Prior to this, he was a Research Fellow at (<a href="https://sites.google.com/view/showlab" target="_blank"><font size="3">Show Lab</font></a>), National University of Singapore, working with Prof. Mike Z. Shou. He received the PhD from Zhejiang University.
+                </font></p>
+
+              <p style="text-align:justify"><font size="3">
+                  Outside of research, he is a popper and has been practicing popping for five years. He also enjoys playing basketball, swimming, hiking, and working out. He has been on two trekking trips to Nepal.
                 </font></p>
    
 
@@ -78,51 +105,44 @@
 
 
         </tbody></table>
-        
-
-
-        <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle;text-align:justify">
+        <style>
+          .research-showcase { margin:12px 20px 4px; }
+          .hiking-embed { display:block; width:100%; height:342px; margin:0 0 24px; border:0; }
+          .research-interests { min-width:0; text-align:justify; }
+          .research-interests .research-copy { font-size:16px; line-height:1.6; }
+          .research-copy p { margin:16px 0; }
+          @media (max-width:656px) {
+            .research-showcase { max-width:calc(100vw - 56px); }
+            .hiking-embed { height:582px; }
+          }
+        </style>
+        <div class="research-showcase">
+          <iframe class="hiking-embed" src="hiking-demo.html?v=9" title="Hiking coding animation" loading="lazy" allow="autoplay"></iframe>
+          <section class="research-interests" aria-label="Research Interests">
                   <heading>
                     <font size="5">Research Interests</font>
                   </heading>
-                  <p>
-                    <font size="3">
-                      <p>
-<!--                      My research focus is broadly centered around scene text detection and recognition, video-and-language tasks(text-based video retrieval, video text tracking and spotting,-->
-<!--					  text-based visual question answering).-->
-                      
-                      My current research interests primarily focus on AI research for camera-based video production, including Video Generation/editing, controllable video generation, and long video generation.
+                  <div class="research-copy">
+                    <p>My current research interests center on two directions:</p>
+                    <ul class="compact-list">
+                      <li><strong>AI coding / agentic systems + video generation (world models):</strong> Combining coding agents, tools such as Blender, and video generation models for controllable and long-form video generation.</li>
+                      <li><strong>AI coding / agentic systems + robotics:</strong> Connecting coding agents with robotic systems for planning, control, and execution in the physical world.</li>
+                    </ul>
+                    <p>I see coding LLMs as the intelligence layer: operating at a slower timescale to handle planning, high-level control, and memory. Higher-frequency models serve as executors or renderers, translating these plans into physical actions or generated video.</p>
+                    <p>If you are interested in either direction, I would be happy to exchange ideas and explore potential collaborations. Please feel free to <a href="mailto:weijiawu96@gmail.com">email me(weijiawu96@gmail.com)</a>.</p>
+                    <p><strong class="hiring-highlight">We are hiring research interns at Huawei Singapore Research Center.</strong></p>
+                  </div>
+          </section>
+        </div>
 
-                  <p>
-                       <a class="button"   style="color:#FFA500"><strong style="font-size:12px">Notes:</strong></a>
-                       <em style="font-size:16px;">
-                        <!-- Any form of talks and potential research collaboration is welcomed.  -->
-                        <strong class="hiring-highlight">We are hiring research interns at Huawei Singapore Research Center.</strong> If you are interested in video generation, controllable / long video generation, unified multimodal models, or world models, feel free to contact me by Email (weijiawu96@gmail.com).
-                        <!-- Thank you. -->
-                           <!-- If there are any potential work opportunities in academia or industry, please feel free to contact me by Email(weijiawu96@gmail.com). Thank you. -->
-<!--                          <em style="font-size:16px;"> If you are interested in some potential research collaboration, feel free to contact me by Email(weijiawu@zju.edu.cn)
-                            . Most importantly, I would
-                            be happy to collaborate with some really self-motivated and enthusiastic undergraduate or post-graduate
-                            students who have intention to pursue MS/Ph.D. in future.-->
-                  </p>
-
-                  </font>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-
-            
-            
             <table
                 style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
                   <tr>
                     <td style="padding:20px;width:100%;vertical-align:middle;text-align:justify">
+                      <heading>
+                        <font size="5">Previous Research Topics</font>
+                      </heading>
                       <p>
                         <font size="3">
                           <ul class="compact-list">
@@ -131,7 +151,7 @@
                             <li><font size=3.5"><b>Image Generation</b>: <a href="https://arxiv.org/abs/2311.14284" target="_blank"><font size="3">ParaDiffusion</font></a> (IJCV 2025)</font></li>
                             <li><font size=3.5"><b>Video Generation</b>: <a href="https://arxiv.org/abs/2403.07420" target="_blank"><font size="3">DragAnything</font></a> (ECCV 2024), <a href="https://github.com/showlab/Awesome-Video-Diffusion" target="_blank"><font size="3">Awesome-Video-Diffusion</font></a> (4.5k stars), <a href="https://weijiawu.github.io/MovieBench/" target="_blank"><font size="3">MovieBench</font></a> (CVPR 2025), <a href="https://weijiawu.github.io/MovieAgent/" target="_blank"><font size="3">MovieAgent</font></a> (Arxiv, Mar., 2025)</font></li>
                             <li><font size=3.5"><b>Unified Multimodal Models</b>: <a href="https://github.com/showlab/Awesome-Unified-Multimodal-Models" target="_blank"><font size="3">Awesome Unified Multimodal Models</font></a> (500+ stars), <a href="https://d2jud02ci9yv69.cloudfront.net/2025-04-28-unified-models-47/blog/unified-models/" target="_blank"><font size="3">Blog--Towards Unified Multimodal Models:Trends and Insights</font></a>, <a href="https://selftok-team.github.io/report/Selftok.pdf" target="_blank"><font size="3">SelfTok</font></a></font></li>
-                            <li><font size=3.5"><b>Visual Reinforcement Learning</b>: <a href="https://arxiv.org/abs/2508.08189" target="_blank"><font size="3">Reinforcement Learning in Vision: A Survey</font></a> (Arxiv, Aug., 2025)</font></li>
+                            <li><font size=3.5"><b>Visual Reinforcement Learning</b>: <a href="https://arxiv.org/abs/2508.08189" target="_blank"><font size="3">Reinforcement Learning for Multimodal Foundation Models: A Survey</font></a> (ACM Computing Surveys)</font></li>
                           </ul>
 
                       </font>
@@ -150,6 +170,7 @@
                   <p>
                     <font size="3">
                           <ul class="compact-list">
+                            <li><font size="3">[Oct. 2026]: <a href="https://arxiv.org/abs/2508.08189" target="_blank">Reinforcement Learning for Multimodal Foundation Models: A Survey</a> got accepted to <b>ACM Computing Surveys</b>!</font></li>
                             <li><font size=3.5">[Mar. 2026]: Received the <a href="http://www.grs.zju.edu.cn/2026/0209/c63080a3133840/page.htm" target="_blank"><font size="3">Excellent Doctoral Dissertation Award of Zhejiang Province</font></a>!</font></li>
                             <li><font size=3.5">[Jan. 2026]: We organize <a href="https://aistory2026.github.io/" target="_blank"><font size="3">CVPR 2026 Workshop on Generative AI for Storytelling (AISTORY)</font></a>!</font></li>
                             <li><font size=3.5">[Aug. 2025]: Invited talks at ICCV 2025 workshops on <a href="https://aistory2026.github.io/2025.html" target="_blank"><font size="3">Generative AI for Storytelling</font></a>! (<a href="https://docs.google.com/presentation/d/1Sgkym7WrWcj0Ql8xoFOd7wPuhFUY-sK9/edit?usp=sharing&ouid=100558337750729843224&rtpof=true&sd=true" target="_blank"><font size="3">Slides</font></a>)</font></li>
@@ -194,21 +215,46 @@
 			<tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle;text-align:justify">
-                  <heading>
+                  <heading id="experience">
                       <font size="5">Experience </font>
                   </heading>
-                  <p>
-                    <font size="3">
-                            
-							      <li><sup></strong></font></sup><font size=3.5">[January 2021 - January 2022]:</font></b><i><b></b></i>Research Intern at MMU, KuaiShou, led by <a href="https://scholar.google.com/citations?user=4nL1cDEAAAAJ&hl=en" target="_blank" target="_blank"><font size="3">Debing Zhang</font></a>
-							      <li><sup></strong></font></sup><font size=3.5">[January 2022 - August 2023]:</font></b><i><b></b></i>Research Intern at MMU, KuaiShou, led by <a href="https://scholar.google.com/citations?user=cPyOunQAAAAJ" target="_blank" target="_blank"><font size="3">Jiahong Li</font></a>
-                    <li><sup></strong></font></sup><font size=3.5">[August 2022 - August 2023]:</font></b><i><b></b></i>Visting PhD student at <a href="https://sites.google.com/view/showlab" target="_blank" target="_blank"><font size="3">Show lab</font></a>, NUS, led by <a href="https://scholar.google.com/citations?user=h1-3lSoAAAAJ&hl=zh-CN" target="_blank" target="_blank"><font size="3">Asst Prof. Mike Shou</font></a>
-                    <li><sup></strong></font></sup><font size=3.5">[Dec. 2023 - Apr. 2025]:</font></b><i><b></b></i>Research Fellow at <a href="https://sites.google.com/view/showlab" target="_blank" target="_blank"><font size="3">Show lab</font></a>, NUS, work with <a href="https://scholar.google.com/citations?user=h1-3lSoAAAAJ&hl=zh-CN" target="_blank" target="_blank"><font size="3">Asst Prof. Mike Shou</font></a>
-                    <li><sup></strong></font></sup><font size=3.5">[Apr. 2025 - Present]:</font></b><i><b></b></i>Researcher at Huawei Singapore Research Center, work with <a href="https://personal.ntu.edu.sg/hanwangzhang/" target="_blank"><font size="3">Prof. Hanwang Zhang</font></a></li>
-                  </p>
-
-                  </font>
-                  </p>
+                  <ol class="experience-timeline" aria-label="Career timeline, most recent first">
+                    <li class="is-current">
+                      <div class="experience-date"><time datetime="2025-04">Apr. 2025</time> &mdash; Present</div>
+                      <div>
+                        <p class="experience-summary"><strong class="experience-role">Senior Researcher</strong> &middot; <span class="experience-org">Huawei Singapore Research Center</span><span class="experience-current">CURRENT</span></p>
+                        <p class="experience-note">Working with <a href="https://personal.ntu.edu.sg/hanwangzhang/" target="_blank">Prof. Hanwang Zhang</a></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="experience-date"><time datetime="2023-12">Dec. 2023</time> &mdash; <time datetime="2025-04">Apr. 2025</time></div>
+                      <div>
+                        <p class="experience-summary"><strong class="experience-role">Research Fellow</strong> &middot; <span class="experience-org"><a href="https://sites.google.com/view/showlab" target="_blank">Show lab</a>, NUS</span></p>
+                        <p class="experience-note">Working with <a href="https://scholar.google.com/citations?user=h1-3lSoAAAAJ&amp;hl=zh-CN" target="_blank">Asst Prof. Mike Shou</a></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="experience-date"><time datetime="2022-08">Aug. 2022</time> &mdash; <time datetime="2023-08">Aug. 2023</time></div>
+                      <div>
+                        <p class="experience-summary"><strong class="experience-role">Visiting PhD Student</strong> &middot; <span class="experience-org"><a href="https://sites.google.com/view/showlab" target="_blank">Show lab</a>, NUS</span></p>
+                        <p class="experience-note">Led by <a href="https://scholar.google.com/citations?user=h1-3lSoAAAAJ&amp;hl=zh-CN" target="_blank">Asst Prof. Mike Shou</a></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="experience-date"><time datetime="2022-01">Jan. 2022</time> &mdash; <time datetime="2023-08">Aug. 2023</time></div>
+                      <div>
+                        <p class="experience-summary"><strong class="experience-role">Research Intern</strong> &middot; <span class="experience-org">MMU, KuaiShou</span></p>
+                        <p class="experience-note">Led by <a href="https://scholar.google.com/citations?user=cPyOunQAAAAJ" target="_blank">Jiahong Li</a></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="experience-date"><time datetime="2021-01">Jan. 2021</time> &mdash; <time datetime="2022-01">Jan. 2022</time></div>
+                      <div>
+                        <p class="experience-summary"><strong class="experience-role">Research Intern</strong> &middot; <span class="experience-org">MMU, KuaiShou</span></p>
+                        <p class="experience-note">Led by <a href="https://scholar.google.com/citations?user=4nL1cDEAAAAJ&amp;hl=en" target="_blank">Debing Zhang</a></p>
+                      </div>
+                    </li>
+                  </ol>
                 </td>
               </tr>
             </tbody>
@@ -349,6 +395,34 @@
       
       <table style="width:95%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         
+
+        <!-- Reinforcement Learning for Multimodal Foundation Models -->
+        <tr id="rl-multimodal-survey">
+          <td style="padding:5px;width:25%;vertical-align:top">
+            <div class="one">
+              <a href="https://arxiv.org/abs/2508.08189" target="_blank">
+                <img src="images/rl-multimodal-survey.png" alt="Reinforcement learning survey illustration" style="object-fit:contain">
+              </a>
+            </div>
+          </td>
+          <td style="padding:5px;width:100%;vertical-align:top">
+            <a href="https://arxiv.org/abs/2508.08189" target="_blank">
+              <papertitle><font size="3">Reinforcement Learning for Multimodal Foundation Models: A Survey</font></papertitle>
+            </a>
+            <br><br>
+            <font size="3"><strong>Weijia Wu</strong>, Chen Gao, Joya Chen, Kevin Qinghong Lin, Qingwei Meng, Yiming Zhang, Yuke Qiu, Hong Zhou, Mike Zheng Shou.</font>
+            <br>
+            <font size="3"><em>ACM Computing Surveys (<strong>CSUR</strong>)</em>.</font>
+            <p></p>
+            <a href="javascript:void(0);" onclick="myFunction('rl_multimodal_overview')"><font size="3">Overview</font></a> /
+            <a href="https://arxiv.org/abs/2508.08189" target="_blank"><font size="3">arXiv</font></a> /
+            <a href="https://github.com/weijiawu/Awesome-RL-for-Multimodal-Foundation-Models" target="_blank"><font size="3">GitHub</font></a>
+            <p></p>
+            <div id="rl_multimodal_overview" style="display:none;text-align:justify">
+              <font size="3"><em>This survey reviews reinforcement learning for multimodal foundation models, covering multimodal language models, visual generation, unified models, and vision-language-action models. It discusses policy optimization, reward design, evaluation, and open challenges.</em></font>
+            </div>
+          </td>
+        </tr>
 
         <!-- WEAVE-->
         <tr onmouseout="WEAVE_stop()" onmouseover="WEAVE_start()">
@@ -1332,6 +1406,12 @@ tasks with only 1/10 training resources compared with CLIP and WenLan, while sho
 					  <font size="5">Academic Service</font>
 				  </heading>
 				  <p>
+                  <heading><font size="4">Workshop Organization</font></heading>
+                  <ul class="compact-list" style="margin-bottom:18px;font-size:16px">
+                    <li><strong>Organizer</strong>, <a href="https://aistory2026.github.io/" target="_blank">CVPR 2026 Workshop on Generative AI for Storytelling (AISTORY)</a>.</li>
+                    <li><strong>Organizer</strong>, <a href="https://sites.google.com/view/loveucvpr23/home" target="_blank">Long-form Video Understanding and Generation Workshop &amp; International Challenge @ CVPR 2023</a>.</li>
+                    <li><strong>Organizer</strong>, <a href="https://rrc.cvc.uab.es/?ch=22&amp;com=introduction" target="_blank">ICDAR 2023 Video Text Reading Competition for Dense and Small Text</a>.</li>
+                  </ul>
 				  <heading><font size="4">Conference Review</font></heading>
 				  <p>
 				  <p>
@@ -1347,8 +1427,6 @@ tasks with only 1/10 training resources compared with CLIP and WenLan, while sho
                             <li><sup></strong></font></sup><font size=3.5">International Conference on Computer Vision (ICCV), 2025.</li>
                             <li><sup></strong></font></sup><font size=3.5">International Conference and Exhibition on Computer Graphics and Interactive Techniques (SIGGRAPH), 2025.</li>  
                             <li><sup></strong></font></sup><font size=3.5">ACM International Conference on Multimedia (ACM MM), 2025.</li>  
-                            <li><sup></strong></font></sup><font size=3.5"><a href="https://syntagen.github.io/#syntagen-competition" target="_blank" target="_blank"><font size="3">CVPR Workshop SyntaGen</font></a> 2024, 2025.</li>
-                            <li><sup></strong></font></sup><font size=3.5"><a href="https://cveu.github.io/" target="_blank" target="_blank"><font size="3">CVPR 2025 Workshop CVEU</font></a>.</li>
 				  </p>
 				  
 				  <heading><font size="4">Journal Review</font></heading>
@@ -1379,6 +1457,7 @@ tasks with only 1/10 training resources compared with CLIP and WenLan, while sho
                     <font size="3">
                             <li><sup></strong></font></sup><font size=3.5">[10/2020] National Scholarship of China.</li>
                             <li><sup></strong></font></sup><font size=3.5">[03/2025] Excellent Doctoral Dissertation Award of Zhejiang University.</li>
+                            <li><font size="3">[03/2026] <a href="http://www.grs.zju.edu.cn/2026/0209/c63080a3133840/page.htm" target="_blank">Excellent Doctoral Dissertation Award of Zhejiang Province</a>.</font></li>
                   </p>
                 </td>
               </tr>

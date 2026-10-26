@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI coding → Blender → rendered video</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:transparent;color:#d9dee5;font-family:Arial,sans-serif}.demo{border:1px solid #cdd3d9;border-radius:10px;overflow:hidden;background:#25272b;box-shadow:0 5px 18px #00000010}.topbar{height:32px;display:flex;gap:7px;align-items:center;padding:0 13px;background:#303236;color:#afb6be;font:10px monospace}.dot{width:6px;height:6px;background:#a2a9b0;border-radius:50%}.dot:first-child{background:#d09581}.dot:nth-child(2){background:#d8c28c}.dot:nth-child(3){background:#a0b98e}.topbar .title{margin-left:10px}.topbar .tag{margin-left:auto;color:#b4c4ac;font-size:9px}.panels{display:grid;grid-template-columns:44% 56%;grid-template-rows:minmax(0,1fr);height:360px}.editor{min-height:0;border-right:1px solid #42464d;display:flex;flex-direction:column;min-width:0;background:#202226}.panel-heading{height:29px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 12px;background:#2a2c30;border-bottom:1px solid #383b41;font:10px monospace;color:#c5c9ce}.panel-heading small{color:#929ba5;font-size:8px}.code{padding:10px 0 10px 35px;margin:0;list-style:none;counter-reset:line;font:11px/1.55 'Menlo',Consolas,monospace;overflow:auto;flex:1}.code li{position:relative;white-space:pre;padding:0 12px 0 8px;min-width:max-content;border-left:2px solid transparent}.code li:before{counter-increment:line;content:counter(line);position:absolute;right:calc(100% + 9px);color:#737d89;font-size:9px}.code .active{background:#688ca028;border-left-color:#8db0c9}.kw{color:#d4a5c6}.str{color:#c5c597}.num{color:#d7ae82}.comment{color:#849283}.terminal{border-top:1px solid #383b41;padding:9px 12px;font:9px/1.5 monospace;color:#aebfa5;min-height:34px}.render{min-height:0;min-width:0;display:flex;flex-direction:column;background:#b4c2cd}.video-box{flex:1;min-height:0;position:relative;background:#1e2427}video{width:100%;height:100%;object-fit:cover;display:block}.caption{position:absolute;top:12px;left:14px;right:14px;pointer-events:none;text-align:center;font:11px/1.5 monospace;color:#fff;text-shadow:0 1px 4px #000;background:#1e252d9e;padding:6px 9px;border-radius:4px}.controls{height:37px;display:flex;align-items:center;gap:12px;padding:0 13px;border-top:1px solid #42464d;background:#2c2f33}.controls button{border:0;background:none;color:#dce1e8;font-size:15px;cursor:pointer;min-width:20px;padding:3px}.controls button:hover{color:#fff}.controls input{flex:1;min-width:30px;height:3px;accent-color:#9cb9d1}.controls output{font:9px monospace;min-width:70px;color:#bfc6cd}.controls a{color:#bfc6cd;font:9px monospace;text-decoration:none}.controls a:hover{color:white}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #a8c8e0;outline-offset:3px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}@media(max-width:600px){.panels{grid-template-columns:1fr;grid-template-rows:270px 240px;height:auto}.editor{height:270px;border-right:0}.render{height:240px}.code{font-size:10px}.topbar .tag{font-size:8px}.controls a{display:none}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+.code li{height:17.05px;min-height:17.05px}.typing-cursor{display:inline-block;width:6px;height:12px;margin-left:1px;vertical-align:-2px;background:#d5e6ee;animation:caret .8s step-end infinite}.is-paused .typing-cursor{animation:none;opacity:.65}@keyframes caret{50%{opacity:0}}@media(max-width:600px){.code li{height:15.5px;min-height:15.5px}}@media(prefers-reduced-motion:reduce){.typing-cursor{display:none}}
+
+.chapters{display:flex;flex-shrink:0;gap:4px;padding:6px 9px;background:#24282e;border-bottom:1px solid #383b41}
+.chapters button{flex:1;border:1px solid transparent;border-radius:4px;background:transparent;color:#9faab6;padding:5px 3px;font:9px monospace;cursor:pointer;white-space:nowrap}
+.chapters button[aria-pressed="true"]{color:#d8ecfa;background:#354856;border-color:#526e81}
+.chapters button:hover{color:#fff;background:#303d48}
+.chapter-title{flex-shrink:0;padding:10px 12px 0;color:#a9c8dd;font:10px/1.4 monospace}
+.code{padding-top:12px;padding-bottom:12px}
+.code li:before{content:attr(data-line);counter-increment:none;font-size:8px;right:calc(100% + 7px)}
+.terminal{flex-shrink:0;min-height:46px;color:#a8b8c4;padding:8px 12px}
+.frame-readout{position:absolute;bottom:12px;right:12px;padding:5px 7px;border-radius:4px;background:#1e252dbd;color:#e6edf4;font:9px monospace;pointer-events:none;font-variant-numeric:tabular-nums}
+@media(max-width:600px){.chapters{padding:4px 8px}.chapter-title{padding-top:7px;font-size:9px}.terminal{min-height:42px;font-size:8px}.topbar .title{margin-left:3px;font-size:9px}.topbar .tag{font-size:7px}.code{padding-top:8px;padding-bottom:8px}}
+/* Compact desktop strip, with enough space for all nine source lines. */
+@media(min-width:601px){
+  .panels{height:270px;grid-template-columns:50% 50%}
+  .panel-heading{height:25px}
+  .chapters{padding:4px 9px}
+  .chapter-title{padding-top:6px}
+  .code{padding-top:7px;padding-bottom:7px;font-size:10px;line-height:1.55}
+  .code li{height:15.5px;min-height:15.5px}
+  .terminal{min-height:32px;padding:6px 12px;font-size:8px}
+  video{object-fit:contain;background:#b4c2cd}
+  .caption{top:8px;font-size:10px;padding:4px 8px}
+}
+</style>
+</head>
+<body>
+<section class="demo" aria-label="Hiking coding animation">
+<div class="topbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="title">snow_hike.py</span><span class="tag" title="AI-authored Python; this video was rendered with Blender Cycles.">AI CODING → BLENDER → VIDEO</span></div>
+<div class="panels">
+<div class="editor"><div class="panel-heading"><span>AI-authored Python</span><small>SOURCE EXCERPTS</small></div>
+<nav class="chapters" aria-label="Blender code chapters">
+<button type="button" data-chapter="0" aria-pressed="true">01 Snow</button>
+<button type="button" data-chapter="1" aria-pressed="false">02 Gait</button>
+<button type="button" data-chapter="2" aria-pressed="false">03 Camera</button>
+<button type="button" data-chapter="3" aria-pressed="false">04 Render</button>
+</nav>
+<div class="chapter-title" id="chapter-title">01 / Build the snow terrain</div>
+<ol class="code" aria-label="Excerpts from the Python script that rendered this video"></ol><div class="terminal" id="terminal" aria-live="off">box() creates the mesh; its material and slope define the snow trail.</div></div>
+<div class="render"><div class="panel-heading"><span>Blender output</span><small>CYCLES · 24 FPS</small></div><div class="video-box"><video id="video" muted autoplay loop playsinline preload="metadata" controls poster="media/hiking-stylized-poster.jpg?v=snow1" aria-label="A stylized 3D hiker crosses a snowy alpine trail, with footprints, snow-covered firs and slower-moving distant mountain ridges"><source src="media/hiking-stylized.mp4?v=snow1" type="video/mp4"></video><div class="caption" id="caption">Python geometry → the snowfield underfoot</div><div class="frame-readout" id="frame-readout">FRAME 000 / 288</div></div></div>
+</div>
+<div class="controls"><button type="button" id="toggle" aria-label="Pause video">Ⅱ</button><button type="button" id="replay" aria-label="Replay video">↺</button><output id="clock">00:00 / 00:12</output><label class="sr-only" for="progress">Video progress</label><input type="range" id="progress" min="0" max="12" step="0.01" value="0"><a href="scripts/render_hiking_stylized.py" download title="Download the complete Blender scene and animation script">Python ↓</a></div>
+</section>
+<script src="hiking-code.js?v=1"></script>
+<script src="hiking-demo.js?v=7"></script>
+</body></html>
